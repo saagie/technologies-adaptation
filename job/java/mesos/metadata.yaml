@@ -26,5 +26,5 @@ contexts:
           label: Scheduled
           mandatory: true
     dockerInfo:
-      image: saagie/java-scala
-      version: 8-1.44.0
+      image: gus75/java
+      version: dgnum-v8-131

@@ -1,0 +1,52 @@
+version: "v1"
+type: JOB
+id: python
+label: python
+description: Java and Scala jobs offer the ability to process content in the JVM.
+available: true
+icon: python
+contexts:
+  - id: 3.5.2
+    label: 3.5.2
+    available: true
+    recommended: false
+    trustLevel: stable
+    job:
+      features:
+        - type: COMMAND_LINE
+          label: Command line
+          mandatory: true
+          comment: Linux shell command to launch the job.
+          defaultValue: python {file} arg1 arg2
+        - type: ARTIFACT
+          label: Package
+          mandatory: true
+          comment: "Compatible upload file : .py or .zip (with optional requirements.txt for pip install)"
+        - type: SCHEDULER
+          label: Scheduled
+          mandatory: true
+    dockerInfo:
+      image: gus75/python
+      version: dgnum-v3.5.2
+  - id: 3.6.2
+    label: 3.6.2
+    available: true
+    recommended: false
+    trustLevel: stable
+    job:
+      features:
+        - type: COMMAND_LINE
+          label: Command line
+          mandatory: true
+          comment: Linux shell command to launch the job.
+          defaultValue: python {file} arg1 arg2
+        - type: ARTIFACT
+          label: Package
+          mandatory: true
+          comment: "Compatible upload file : .py or .zip (with optional requirements.txt for pip install)"
+        - type: SCHEDULER
+          label: Scheduled
+          mandatory: true
+    dockerInfo:
+      image: gus75/python
+      version: dgnum-v3.6.2
