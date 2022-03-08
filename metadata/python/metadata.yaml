@@ -5,7 +5,7 @@ label: python
 description: Java and Scala jobs offer the ability to process content in the JVM.
 available: true
 icon: python
-contexts:
+contexts: 
   - id: 3.5.2
     label: 3.5.2
     available: true
@@ -26,10 +26,10 @@ contexts:
           label: Scheduled
           mandatory: true
     dockerInfo:
-      image: gus75/python
-      version: dgnum-v3.5.2
-  - id: 3.6.2
-    label: 3.6.2
+      image: saagie/python
+      version: dgnum-mesos-3.5.2-1.3.1-centos
+  - id: 3.6.10
+    label: 3.6.10
     available: true
     recommended: false
     trustLevel: stable
@@ -48,5 +48,5 @@ contexts:
           label: Scheduled
           mandatory: true
     dockerInfo:
-      image: gus75/python
-      version: dgnum-v3.6.2
+      image: saagie/python
+      version: dgnum-k8s-3.6.202002.72
