@@ -1,15 +1,14 @@
 version: "v1"
 type: JOB
-id: python
-label: python
-description: Java and Scala jobs offer the ability to process content in the JVM.
+id: java-scala
+label: Java/Scala
 available: true
-icon: python
+icon: java-scala
 contexts:
-  - id: 3.5.2
-    label: 3.5.2
+  - id: 8.131
+    label: 8.131
     available: true
-    recommended: false
+    recommended: true
     trustLevel: stable
     job:
       features:
@@ -17,21 +16,21 @@ contexts:
           label: Command line
           mandatory: true
           comment: Linux shell command to launch the job.
-          defaultValue: python {file} arg1 arg2
+          defaultValue: java -jar {file} arg1 arg2
         - type: ARTIFACT
           label: Package
           mandatory: true
-          comment: "Compatible upload file : .py or .zip (with optional requirements.txt for pip install)"
+          comment: "Compatible upload file : .jar"
         - type: SCHEDULER
           label: Scheduled
           mandatory: true
     dockerInfo:
-      image: gus75/python
-      version: dgnum-v3.5.2
-  - id: 3.6.2
-    label: 3.6.2
+      image: saagie/java
+      version: dgnum-mesos-8.131
+  - id: 8.2
+    label: 8.2
     available: true
-    recommended: false
+    recommended: true
     trustLevel: stable
     job:
       features:
@@ -39,14 +38,14 @@ contexts:
           label: Command line
           mandatory: true
           comment: Linux shell command to launch the job.
-          defaultValue: python {file} arg1 arg2
+          defaultValue: java -jar {file} arg1 arg2
         - type: ARTIFACT
           label: Package
           mandatory: true
-          comment: "Compatible upload file : .py or .zip (with optional requirements.txt for pip install)"
+          comment: "Compatible upload file : .jar"
         - type: SCHEDULER
           label: Scheduled
           mandatory: true
     dockerInfo:
-      image: gus75/python
-      version: dgnum-v3.6.2
+      image: saagie/java
+      version: dgnum-k8s-8.202002.72
