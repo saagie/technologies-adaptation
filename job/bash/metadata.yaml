@@ -1,0 +1,30 @@
+version: "v1"
+type: JOB
+id: bash
+label: Bash
+description: Bash is a command processor that typically runs in a text window where the user types commands that cause actions.
+available: true
+icon: bash
+contexts:
+  - id: debian9-stretch
+    label: debian9-stretch
+    available: true
+    recommended: false
+    trustLevel: stable
+    job:
+      features:
+        - type: COMMAND_LINE
+          label: Command line
+          mandatory: true
+          comment: Linux shell command
+          defaultValue: echo "Saagie Bash"
+        - type: ARTIFACT
+          label: Package
+          mandatory: false
+          comment: All files are accepted.
+        - type: SCHEDULER
+          label: Scheduled
+          mandatory: true
+    dockerInfo:
+      image: saagie/bash
+      version: dgnum-k8s-debian9-stretch.202002.72

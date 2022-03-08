@@ -1,0 +1,26 @@
+version: v1
+type: APP
+id: jupyter
+label: Jupyter Notebook
+baseline: Data Science Notebook.
+description: The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualization and narrative text.
+available: true
+icon: jupyter
+backgroundColor: "#E87A35"
+customFlags: []
+contexts:
+  - id: jupyter-notebook-v2
+    label: Python 3.6
+    releaseNotes: First version of Jupyter Notebook into Saagie.
+    available: true
+    trustLevel: stable
+    recommended: false
+    ports:
+      - port: 8888
+        name: Notebook
+        rewriteUrl: false
+        basePath: SAAGIE_BASE_PATH
+    volumes: ["/notebooks-dir"]
+    dockerInfo:
+      image: saagie/jupyter
+      version: dgnum-k8s-v2
